@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-/**
- * This is the original code from the test
- */
+
 function SampleComponent() {
     const [data, setData] = useState([]);
     const [error, setError] = useState('');
@@ -29,3 +27,5 @@ function SampleComponent() {
         </div>
     );
 }
+
+export default SampleComponent;
