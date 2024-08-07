@@ -1,5 +1,5 @@
 
-@Author: Samuel Amador
+<b>Author:</b> Samuel Amador
 
 # Screenshot
 https://i.imgur.com/LC7LiRa.png
@@ -9,4 +9,4 @@ https://i.imgur.com/LC7LiRa.png
 - git clone
 - npm start
 
-Note: Code review is in SampleComponent.js
+Note: Code review is in `SampleComponent.js`
