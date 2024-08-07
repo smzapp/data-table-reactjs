@@ -28,6 +28,7 @@ function App() {
     <DataTable
       columns={columns}
       data={getDummyData()}
+      per_page={15}
     />
   )
 }

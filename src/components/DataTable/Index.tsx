@@ -2,6 +2,7 @@ import React from 'react'
 import TableHeader, { Column } from './TableHeader';
 import DataTableProvider from './DataTableProvider';
 import TableBody from './TableBody';
+import DataPagination from './DataPagination';
 
 export interface IDataTable {
   data: Array<any>;
@@ -25,6 +26,7 @@ const DataTable: React.FC<IDataTable> = ({
           <TableHeader columns={columns}/>
           <TableBody columns={columns}/>
         </table>
+        <DataPagination />
       </div>
     </DataTableProvider>
   )
