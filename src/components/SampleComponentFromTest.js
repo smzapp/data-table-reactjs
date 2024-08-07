@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-function SampleComponent() {
+function SampleComponentFromTest() {
     const [data, setData] = useState([]);
     const [error, setError] = useState('');
 
@@ -28,4 +28,4 @@ function SampleComponent() {
     );
 }
 
-export default SampleComponent;
+export default SampleComponentFromTest;
