@@ -4,6 +4,8 @@ export interface IDataTableContext {
   data: Array<any>;
   itemsPerPage: number;
   setItemsPerPage: (count: number) => void;
+  currentPage: number;
+  setCurrentPage: (count: number) => void;
 }
 
 const DataTableContext = createContext<IDataTableContext | undefined>(undefined);
@@ -16,18 +18,22 @@ export const useDataTableContext = () => {
   return context;
 }
 
-const DataTableProvider : React.FC<{children: ReactNode, data : Array<any>}> = ({
+const DataTableProvider : React.FC<{children: ReactNode, data : Array<any>, per_page: number}> = ({
   children,
-  data
+  data,
+  per_page = 10
 }) => {
-  const [itemsPerPage, setItemsPerPage] = useState<number>(10);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(per_page);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   return (
     <DataTableContext.Provider
       value={{
         data,
         itemsPerPage,
-        setItemsPerPage
+        setItemsPerPage,
+        currentPage,
+        setCurrentPage
       }}
     >{children}</DataTableContext.Provider>
   )

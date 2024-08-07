@@ -1,10 +1,12 @@
 import React from 'react'
 
+export interface Column{
+  key: string;
+  label: string;
+}
+
 export interface ITableHeader{
-  columns: {
-    key: string;
-    label: string;
-  } [];
+  columns: Array<Column>;
 }
 
 const TableHeader : React.FC<ITableHeader> = ({columns}) => {
