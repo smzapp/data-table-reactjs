@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-function SampleComponentFromTest() {
+function SampleComponent() {
+
     const [data, setData] = useState([]);
+
     const [error, setError] = useState('');
+
 
     useEffect(() => {
         axios.get('http://example.com/api/data')
@@ -16,6 +19,7 @@ function SampleComponentFromTest() {
             });
     }, []);
 
+
     return (
         <div>
             {error && <p>{error}</p>}
@@ -26,6 +30,7 @@ function SampleComponentFromTest() {
             </ul>
         </div>
     );
+    
 }
 
-export default SampleComponentFromTest;
+export default SampleComponent;
